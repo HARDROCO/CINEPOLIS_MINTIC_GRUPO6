@@ -1,5 +1,9 @@
-<link rel="stylesheet" href="/static/css/styles.css">
-<link rel="stylesheet" href="/static/css/main.css">
+{% extends 'header.html' %}
+{% block title %}
+Ingreso
+{% endblock title %}
+
+{% block content %}
 
 <div class="login-box">
     <img class="logo-signin" src="/static/img/logo.svg" alt="logo">
@@ -15,7 +19,8 @@
             <a href="#">Ingresar</a>
         </button> -->
 
-        <a href="#">Has olvidado tu contraseña?</a> <br>
-        <a href="signup.html">No tienes una cuenta?</a>
+        <a href="{{ url_for('forgetpass') }}">Has olvidado tu contraseña?</a> <br>
+        <a href="{{ url_for('signup') }}">No tienes una cuenta?</a>
     </form>
 </div>
+{% endblock content %}

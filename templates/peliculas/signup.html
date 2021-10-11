@@ -1,5 +1,9 @@
-<link rel="stylesheet" href="/static/css/styles.css">
-<link rel="stylesheet" href="/static/css/main.css">
+{% extends 'header.html' %}
+{% block title %}
+Registro
+{% endblock title %}
+
+{% block content %}
 
 <div class="login-box">
     <img class="logo-signin" src="/static/img/logo.svg" alt="logo">
@@ -14,9 +18,13 @@
         <label for="password">Repita la contraseña</label>
         <input type="password" placeholder="Ingrese nuevamente su contraseña" required>
 
+        <input id="remember" name="remember" type="checkbox" checked="checked">
+        <label for="remember">Acepto los <a href="#">Términos y Condiciones</a> y <a href="#">Politicas de Protección de
+                Datos</a></label>
+
         <input type="submit" value="Registrar">
 
-        <a href="#">Has olvidado tu contraseña?</a> <br>
-        <a href="signin.html">Ya tienes una cuenta?</a>
+        <a href="{{ url_for('signin') }}">Ya tienes una cuenta?</a>
     </form>
 </div>
+{% endblock content %}
