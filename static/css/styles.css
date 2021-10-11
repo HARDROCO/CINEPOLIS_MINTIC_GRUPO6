@@ -118,7 +118,7 @@
 }
 /*LOGIN*/
 .login-box{
-    width: 320px;
+    width: auto;
     height: auto;
     background-color: var(--secondary-color);
     color: var(--text-color-inverse);
@@ -202,4 +202,8 @@
 }
 .login-box a:hover{
     text-decoration: underline;
+}
+
+.login-box #remember{
+    width: auto;
 }
