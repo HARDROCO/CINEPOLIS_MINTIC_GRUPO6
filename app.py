@@ -1,5 +1,4 @@
 # app principal colocada conexion a slqite
-
 from flask import Flask
 from flask import render_template, request, redirect, url_for, flash
 # Para poder subir archivos y que los muestre
@@ -8,8 +7,6 @@ from flask import send_from_directory
 import sqlite3 as sql3  # conexion a base de datos
 from datetime import datetime  # Para renombrar las imagenes que subamos con la fecha
 import os  # Para entrar a la carpeta de imagenes
-import pandas as pd
-
 
 # FIXME: crear unan clase para poner la conexion independiente a cualquier data base  por ahora la dejare aca - fer
 # conexion a base de datos
@@ -28,11 +25,6 @@ def conexion(path: str) -> bool:
 
     return result, conn
 
-
-# ENVIAR PATH Y CONECTARSE
-path = 'db\cinepolis.db'
-result, conn = conexion(path)
-
 # ----------------------------------------------------
 
 app = Flask(__name__)
@@ -44,6 +36,9 @@ app.config['CARPETA'] = carpeta
 
 @app.route('/')
 def index():
+    # ENVIAR PATH Y CONECTARSE
+    path = 'db\cinepolis.db'
+    result, conn = conexion(path)
 
     sql = 'SELECT * FROM ASIENTO'
     cursor = conn.cursor()  # Creamos un cursor para poder ejecutar las consultas
