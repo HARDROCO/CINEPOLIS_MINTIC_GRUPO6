@@ -1,12 +1,13 @@
-# clase para crear conexiones con la data bate 
-
-
+# clase para crear conexiones con la data bate
 # FIXME: crear unan clase para poner la conexion independiente a cualquier data base  por ahora la dejare aca - fer
 # conexion a base de datos
 # ------------------------------------------------
+import sqlite3
+
 
 class conexion():
     def __init__(self):
+        self.sql
         return
 
     def conexion(path: str) -> bool:
@@ -22,13 +23,6 @@ class conexion():
 
         return result, conn
 
-
     # ENVIAR PATH Y CONECTARSE
     path = 'db\cinepolis.db'
     result, conn = conexion(path)
-
-
-
-
-
-
