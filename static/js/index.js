@@ -1,3 +1,4 @@
+// TODO: falta agreegar funcion de validacion 
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 

@@ -9,6 +9,8 @@
     left: 0;
     box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14);
 }
+
+
 .nav{
     display:flex;
     justify-content: space-between; /*alinea uno a la izq otro a la derecha*/
@@ -38,6 +40,7 @@
     width: max-content; /*no corta el contenido si sin dos palabras*/
     
 }
+
 .nav-menu-link{
     padding: 12px 12px;
     border-radius: 5px;
@@ -50,6 +53,8 @@
 .nav-menu a{
     position: relative;
 }
+
+
 .nav-toggle{
     color: var(--terciary-color);
     background: none;
@@ -60,6 +65,7 @@
     display: none;
     cursor: pointer;
 }
+
 .nav-button{
     display: inline-block;
     background-color: var(--primary-color);
@@ -206,4 +212,67 @@
 
 .login-box #remember{
     width: auto;
+}
+
+/* ----------------------------------------------------------------  */
+/* estilos footer  */
+.footer{
+    position: fixed;
+    background-color: var(--secondary-color);
+    bottom: 0;
+    left: 0;
+    height: 300px;
+    width: 100%;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14);
+}
+
+.container{
+    background-color: blue;
+    display: flex;
+    height: 100%;
+}
+
+.row{
+    background-color: aquamarine;
+    
+
+}
+
+/* columna 1  */
+.col-1{
+    background-color: rgb(27, 43, 114);
+    display: inline-block;
+
+}
+
+.footer_app{
+
+}
+
+.footer_logo{
+
+}
+
+/* columna 2  */
+.col-2{
+    background-color: rgb(114, 33, 27);
+    display: inline-block;
+
+}
+
+/* columna 2  */
+.col-3{
+    background-color: rgb(128, 151, 24);
+    display: inline-block;
+
+}
+
+.col-4{
+    background-color: rgb(255, 0, 234);
+    display: inline-block;
+}
+
+.footer-copyright{
+    background-color: rgb(44, 82, 22);
+    bottom: 0;
 }
