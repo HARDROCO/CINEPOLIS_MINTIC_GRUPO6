@@ -14,7 +14,7 @@ import os  # Para entrar a la carpeta de imagenes
 
 def conexion(path: str) -> bool:
     '''esta funcion se conecta a la base de datos de sqlite teniendo el archivo en local'''
-    restul = False
+    result = False
     try:
         # GENERAMOS coneccion con la libreria y un proyecto particular
         conn = sql3.connect(path)
