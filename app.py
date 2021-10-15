@@ -77,6 +77,7 @@ def signup():
 
     return render_template('peliculas/signup.html')
 
+
 @app.route('/forgetpass')
 def forgetpass():
 
