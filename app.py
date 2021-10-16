@@ -20,9 +20,25 @@ def signup():
     return render_template('peliculas/signup.html')
 
 @app.route('/forgetpass')
-def forgetpass():
+def forgetpass ():
 
     return render_template('peliculas/forgetpass.html')
+
+@app.route('/cartelera/')
+def cartelera():
+    return render_template('peliculas/cartelera.html')
+
+@app.route('/perfil/')
+def perfil():
+    return render_template('peliculas/perfil.html')
+
+@app.route('/comidas/')
+def comidas():
+    return render_template('peliculas/comidas.html')
+
+@app.route('/proximamente/')
+def proximamente():
+    return render_template('peliculas/proximamente.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

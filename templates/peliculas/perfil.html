@@ -1,0 +1,68 @@
+{% extends 'header.html' %}
+
+{% block title %}
+Perfil
+{% endblock %}
+
+
+{% block content %}
+<div class="cajaLogin">
+    <div class="flex60">
+        <h2>PERFIL DE USUARIO</h2>
+        <button class="btnM"><a href="{{url_for('index')}}">SALIR</a></button>
+    </div>
+    <!-- Formulario de login -->
+    <form action="" class="frm60" method="GET">
+        <div class="flex100">
+            <div class="div1">
+                <h5>Nombres</h5>
+                <input type="text" name="" id="" placeholder="Nombres">
+                <h5>Tipo Doc.</h5>
+                <select style="width: 50%;" name="tipoDoc">
+                    <option value="1">Cédula</option>
+                    <option value="2">Tar-Identidad</option>
+                    <option value="3">Ced.Extranjería</option>
+                </select>
+            </div>
+            <div class="div1">
+                <h5>Apellidos</h5>
+                <input type="text" name="" id="" placeholder="Apellidos">
+                <h5>Documento</h5>
+                <input type="text" name="" id="" placeholder="Documento">
+            </div>
+        </div>
+        <div class="flex100">
+            <div class="div1">
+                <h5>Fecha Nacimiento</h5>
+                <input type="date" name="" id="fecha">
+            </div>
+        </div>
+        <div class="div1">
+            <h5>Email</h5>
+            <input type="email" name="" id="" placeholder="Email">
+            <h5>Celular</h5>
+            <input type="tel" name="" id="telefono" placeholder="No.Teléfono">
+        </div>
+        <button class="btnM" formaction="{{url_for('index')}}" type="submit">GUARDAR</button>
+    </form>
+    <div class="flex60">
+        <h2>CAMBIO CONTRASEÑA</h2>
+    </div>
+    <!-- Formulario cambio Password -->
+    <form action="" class="frm60" method="GET">
+        <div class="flex100">
+            <div class="div1">
+                <h5>Anterior</h5>
+                <input type="text" name="" id="" placeholder="Contraseña">
+                <h5>Nueva</h5>
+                <input type="text" name="" id="" placeholder="Nueva Contraseña">
+                <h5>Confirmar</h5>
+                <input type="text" name="" id="" placeholder="Confirmar Contraseña">
+            </div>
+        </div>
+
+        <button class="btnM" formaction="{{url_for('index')}}" type="submit">CAMBIAR</button>
+    </form>
+</div>
+{% include 'footer.html' %}
+{% endblock content %}

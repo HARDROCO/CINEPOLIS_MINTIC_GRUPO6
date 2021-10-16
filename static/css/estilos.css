@@ -1,0 +1,273 @@
+/* @import 'styles2.css'; con esta regla podemos importar otros archivos css
+*/
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    flex: 50%;
+}
+
+nav a {
+    display:flex;
+    justify-content: space-between; /*alinea uno a la izq otro a la derecha*/
+    max-width: 992px;/*breakpoint tomado de bootstrap*/
+    margin: 0 auto; /*para que quede centrado*/
+    color: var(--text-color-inverse);
+    font-weight: bold;
+    text-decoration: none;
+
+    
+    
+}
+
+.btnM {
+    width: 90px;
+    height: 30px;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    border-style: none;
+    border-radius: 15px;
+    color: white;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.btnM a {
+    text-decoration: none;
+    color: white;
+}
+
+.btnM:hover {
+    font-style: italic;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    background-image: url(../img/home__bg.jpg);
+    background-size: cover;
+    
+}
+
+.cajaLogin { 
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#fecha {
+    width: 30%;
+}
+
+#telefono {
+    width: 30%;
+}
+
+
+.frm60 {
+    width: 60%;
+    background-color:var(--secondary-color);
+    padding: 40px 20px;
+    border-radius: 20px;
+
+}
+
+.flex100 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.flex100 img{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    
+}
+.flex60 {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.div1 {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    flex-direction: column;
+    flex: 100%;
+}
+
+.frm80 {
+    width: 80%;
+    background-color:var(--secondary-color);
+    padding: 20px 20px;
+    border-radius: 20px;
+
+}
+
+.frm30 {
+    width: 30%;
+    background-color:var(--secondary-color);
+    padding: 20px 20px;
+    border-radius: 20px;
+
+}
+.cajaLogin h2 {
+    color: var(--secondary-color);
+    margin: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #d3caca;
+    font-size: 16px;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.cajaLogin form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #d3caca;
+    font-size: 16px;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.flex-header img {
+    display: flex;
+    line-height: 130px;
+
+}
+.flex-header, .flex-footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--secondary-color);
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.flex-footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--secondary-color);
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+.flex-footer a {
+    color: rgb(250, 249, 252);
+    font-weight: bold;
+    padding: 10px 10px 10px 0px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.flex-footer h5 {
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 10px 0px;
+    text-decoration: none;
+
+}
+
+.flex-footer img {
+    width: 250px;
+
+    display: block;
+}
+
+.flex-cine {
+    display: flex;
+    flex-direction:column;
+}
+
+.flex-cine p{
+    color: rgb(250, 249, 252);
+    font-weight: bold;
+    padding: 10px 10px 10px 20px;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+
+
+
+
+.negro {
+    display: flex;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    width: 100%;
+    height: 20px;
+    justify-content: center;
+}
+
+.negro p{
+    font-size: 8px;
+    color: var(--secondary-color);
+}
+
+.tituloCaja {
+    display: flex;
+}
+
+
+/* ADICION DE YESID */
+
+.movies {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 15px;
+    padding: 10px;
+    
+}
+
+.movies div{
+    font-size: 12px;
+    color: var(--primary-color);
+    padding: 10px;
+}
+
+.card-img-top{
+    width: 50px;
+    height: 320px;
+}
+
+.card-body{
+    width: 300px;
+    height: 140px;
+}

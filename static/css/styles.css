@@ -60,8 +60,20 @@
     display: none;
     cursor: pointer;
 }
+/* .nav-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: auto;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color-inverse);
+    margin-left: 40px;
+} */
 .nav-button{
     display: inline-block;
+    height: 40px;
     background-color: var(--primary-color);
     border: none;
     border-radius: 20px;
@@ -70,7 +82,6 @@
     color: var(--text-color-inverse);
     cursor: pointer;
     margin-left: 40px;
-
 }
 @media(max-width: 768px){ /*cuando tenga menos de 768px se aplican estos estilos*/
     body{
@@ -122,13 +133,11 @@
     height: auto;
     background-color: var(--secondary-color);
     color: var(--text-color-inverse);
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
+    position: relative;
     box-sizing: border-box;
     padding: 70px 30px;
     border-radius: 20px;
+    margin: 50px auto;
 }
 .logo-signin{
     width: 200px;
@@ -206,4 +215,5 @@
 
 .login-box #remember{
     width: auto;
+
 }

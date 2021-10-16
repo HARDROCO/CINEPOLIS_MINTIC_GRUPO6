@@ -1,0 +1,153 @@
+{% extends 'header.html' %}
+{% block title %}
+Comidas
+{% endblock title %}
+
+{% block content %}
+<!--banner promocional-->
+
+<!-- <section class="fund_second">    -->
+<div class="flex100">
+
+    <a href="#img1"> <img src="..\static\img\combo9.jpg"> </a>
+    <a href="#img2"> <img src="..\static\img\combo10.jpg"> </a>
+    <a href="#img3"> <img src="..\static\img\combo9.jpg"> </a>
+</div>
+<!-- </section> -->
+
+<!--la funcionalidad del banner-->
+<article class="light-box" id="img1">
+
+    <!-- <a href="" class="next"><i class="fas fa-arrow-left"></i></a> -->
+    <a href="#img3" class="next"> <img src="..\static\img\btn_left.png"> </a>
+    <img src="..\static\img\combo9.jpg">
+    <!-- <a href="" class="next"><i class="fas fa-arrow-right"></i></a> -->
+    <a href="#img2" class="next"> <img src="..\static\img\btn_right.png">
+        <a href="" class="close">X</a>
+
+</article>
+
+<article class="light-box" id="img2">
+
+    <a href="#img1" class="next"> <img src="..\static\img\btn_left.png"> </a>
+    <img src="..\static\img\combo10.jpg">
+    <a href="#img3" class="next"> <img src="..\static\img\btn_right.png">
+        <a href="" class="close">X</a>
+
+</article>
+
+<article class="light-box" id="img3">
+
+    <a href="#img2" class="next"> <img src="..\static\img\btn_left.png"> </a>
+    <img src="..\static\img\combo9.jpg">
+    <a href="#img1" class="next"> <img src="..\static\img\btn_right.png">
+        <a href="" class="close">X</a>
+
+</article>
+<main>
+    <section>
+        <h2 class="h2_title">Comidas</h2>
+        <span class="linea"></span>
+    </section>
+
+    <section id="img_food">
+        <div class="casilla">
+            <article>
+                <img src="..\static\img\combo1.png">
+                <div class="buy_food">
+                    <h4>COMBO 1</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing</h5>
+                    <label class="icon-minus-circled"> O </label>
+                    <label class="icon-plus-circled"> </label>
+                </div>
+            </article>
+            <article>
+                <img src="..\static\img\combo2.jpg">
+                <div class="buy_food">
+                    <h4>COMBO 2</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing</h5>
+                    <label class="icon-minus-circled"> O </label>
+                    <label class="icon-plus-circled"> </label>
+                </div>
+            </article>
+            <article>
+                <img src="..\static\img\combo3.jpg">
+                <div class="buy_food">
+                    <h4>COMBO 3</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing</h5>
+                    <label class="icon-minus-circled"> O </label>
+                    <label class="icon-plus-circled"> </label>
+                </div>
+            </article>
+            <article>
+                <img src="..\static\img\combo4.jpg">
+                <div class="buy_food">
+                    <h4>COMBO 4</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing</h5>
+                    <label class="icon-minus-circled"> O </label>
+                    <label class="icon-plus-circled"> </label>
+                </div>
+            </article>
+            <article>
+                <img src="..\static\img\combo1.png">
+                <div class="buy_food">
+                    <h4>COMBO 5</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing</h5>
+                    <label class="icon-minus-circled"> O </label>
+                    <label class="icon-plus-circled"> </label>
+                </div>
+            </article>
+            <article>
+                <img src="..\static\img\combo2.jpg">
+                <div class="buy_food">
+                    <h4>COMBO 6</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing</h5>
+                    <label class="icon-minus-circled"> O </label>
+                    <label class="icon-plus-circled"> </label>
+                </div>
+            </article>
+            <article>
+                <img src="..\static\img\combo1.png">
+                <div class="buy_food">
+                    <h4>COMBO 7</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing</h5>
+                    <label class="icon-minus-circled"> O </label>
+                    <label class="icon-plus-circled"> </label>
+                </div>
+            </article>
+            <article>
+                <img src="..\static\img\combo2.jpg">
+                <div class="buy_food">
+                    <h4>COMBO 8</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing</h5>
+                    <label class="icon-minus-circled"> O </label>
+                    <label class="icon-plus-circled"> </label>
+                </div>
+            </article>
+            <article>
+                <img src="..\static\img\combo3.jpg">
+                <div class="buy_food">
+                    <h4>COMBO 9</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing</h5>
+                    <label class="icon-minus-circled"> O </label>
+                    <label class="icon-plus-circled"> </label>
+                </div>
+            </article>
+            <article>
+                <img src="..\static\img\combo4.jpg">
+                <div class="buy_food">
+                    <h4>COMBO 10</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing</h5>
+                    <label class="icon-minus-circled"> O </label>
+                    <label class="icon-plus-circled"> </label>
+                </div>
+            </article>
+        </div>
+    </section>
+    <center>
+        <h2 class="btn_plus">Ver más</h2>
+    </center>
+</main>
+
+{% include 'footer.html' %}
+{% endblock content %}

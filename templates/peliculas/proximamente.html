@@ -1,4 +1,15 @@
-{% include 'header.html' %}
+{% extends 'header.html' %}
+{% block title %}
+Proximamente
+{% endblock title %}
+
+{% block content %}
+<!-- Barra Superior -->
+
+<section>
+    <h2 class="h2_title">Próximamente</h2>
+    <span class="linea"></span>
+</section>
 
 <div class="row row-cols-1 row-cols-md-3 g-6">
     <div class="movies">
@@ -69,6 +80,5 @@
     </div>
 </div>
 
-
-
-	{% include 'footer.html' %}	
+{% include 'footer.html' %}
+{% endblock content %}

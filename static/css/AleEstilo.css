@@ -1,0 +1,329 @@
+*{
+    box-sizing: border-box; /*tamaños que encajan, todo se contenga en un modelo de caja*/
+    margin:0;
+    padding:0;
+}
+body{
+    background: #212121;
+    /* padding-top: 70px; */
+    font-family: 'Montserrat', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*banner promocional*/
+.fund_second{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    position: relative;
+}
+.fund_second img{
+    width:100%;
+    height: 50%;
+    vertical-align: top;
+    object-fit: cover; /*que no pierda la definicion*/
+/* transition: transform 0.5s;*/
+}
+
+
+/*
+.fund_second > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0,0,0, .5); sombreado
+}
+*/
+
+.galeria a:hover img{
+    filter: blur(2px); /*si paso el mouse hover, se ve borroso*/
+    /* transform: rotate(10deg) scale(1.3); aqui me voltea la img 10° */ 
+}
+
+/*vamos a trabajar con el efecto de agrandar con flechas */
+
+
+.light-box{
+    position:fixed; /*fijo la imagen*/
+    top:0;
+    left: 0;
+    background: rgba(0,0,0,.5); /*transparencia*/
+    width: 100%;
+    height: 100vh;
+    z-index: 1000; /*para que sobrepasen elementos que lleguen a estar*/
+    display: flex;
+    justify-content: center; /*centrado horizontalmente*/
+    align-items: center; /*centrado verticalmente*/
+    transform: scale(0); /*cambie la escala como efecto a 0*/
+    transition: transform 0.3s ease-in-out;
+}
+
+.light-box img{
+    width: 40vw; /*ancho a cople a la pagina*/
+    max-height: 50vh; /*el largo */
+}
+
+.light-box:target{ /*si alguien le a dado clic a la img*/
+    transform: scale(1);
+}
+
+.close{
+    display: block;
+    position: absolute;
+    top:40px;
+    right:40px;
+    background:var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    width:40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px; 
+    border-radius: 50%;
+}
+
+.next img{
+    display: block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/*mejorar la forma con distintos tamaños de pantalla*/
+@media screen and (max-width:400px){
+    
+    .fund_second{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .close{
+        top:20px;
+        right: 20px
+    }
+}
+
+.combos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width:90%;
+    height: 50%;
+    margin: auto;
+    grid-gap: 10px; /* espacio estre filas*/
+    padding: 40px 0; /*espaciado entre arriba y abajo*/
+    overflow: hidden; /*que nada salga de ahi*/
+}
+
+.h2_title{
+    display: block;
+    font-weight: 100;
+    text-align: left;
+    font-size: 40px;
+    color: var(--secondary-color)
+}
+.linea{
+    background: var(--secondary-color);
+    height: 5px;
+    width:100%;
+    display: block;
+}
+
+#menu-bar{
+    display: none;
+}
+header label{
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+    cursor: pointer;
+    
+}
+
+.menu{
+    position:absolute;
+    top:15px;
+    left: 300px;
+    width: 100%;
+    height: 100vh;
+    /*
+    transition: all 0.5s;
+    transform: translateX(-100%);
+
+    /*background: rgba(51,51,51,0.9); sombra*/
+}
+
+.menu a {
+    /*si display block queda como col, si es inline-block queda en fila*/
+    display: inline-block;
+    color: var(--primary-color);
+    position:relative;
+    height: 50px;
+    margin-top: 10px;
+    text-decoration: none;
+   /* padding: 15px;*/
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    margin-left: 30px;
+}
+
+.menu a:hover{
+    
+    background: rgba(255,255,255,0.3);
+}
+/*
+#menu-bar:checked ~ .menu{
+    transform: translateX(0%);
+}
+*/
+
+#buscar_header{
+    display: block;
+    float: right;
+    width: 10vw;
+    height: 5vh;
+    background: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+#buscar_food{
+    display: block;
+    float: right;
+    width: 50vw;
+    height: 5vh;
+    background: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+@font-face {
+    font-family: 'fontello';
+    src: url('../fonts/fontello.eot?33804405');
+    src: url('../fonts/fontello.eot?33804405#iefix') format('embedded-opentype'),
+         url('../fonts/fontello.woff2?33804405') format('woff2'),
+         url('../fonts/fontello.woff?33804405') format('woff'),
+         url('../fonts/fontello.ttf?33804405') format('truetype'),
+         url('../fonts/fontello.svg?33804405#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+  /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+  /*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: 'fontello';
+      src: url('../font/fontello.svg?33804405#fontello') format('svg');
+    }
+  }
+  */
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+  
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+  
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+  
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+  
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+  
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+  
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+  
+  .icon-search:before { content: '\e800'; } /* '' */
+  .icon-cart:before { content: '\e801'; } /* '' */
+  .icon-credit-card-1:before { content: '\e802'; } /* '' */
+  .icon-plus-circled:before { content: '\e803'; } /* '' */
+  .icon-minus-circled:before { content: '\e804'; } /* '' */
+  .icon-calendar:before { content: '\e805'; } /* '' */
+  .icon-login:before { content: '\e806'; } /* '' */
+  .icon-cog-alt:before { content: '\e807'; } /* '' */
+  .icon-arrows-cw:before { content: '\e80a'; } /* '' */
+  .icon-credit-card:before { content: '\e812'; } /* '' */
+  .icon-facebook:before { content: '\f09a'; } /* '' */
+  .icon-menu:before { content: '\f0c9'; } /* '' */
+  .icon-thumbs-up-alt:before { content: '\f164'; } /* '' */
+  .icon-thumbs-down-alt:before { content: '\f165'; } /* '' */
+  .icon-instagram:before { content: '\f16d'; } /* '' */
+  .icon-cc-visa:before { content: '\f1f0'; } /* '' */
+  .icon-cc-mastercard:before { content: '\f1f1'; } /* '' */
+  .icon-cc-paypal:before { content: '\f1f4'; } /* '' */
+  .icon-user-circle-o:before { content: '\f2be'; } /* '' */
+  .icon-window-minimize:before { content: '\f2d1'; } /* '' */
+  .icon-window-restore:before { content: '\f2d2'; } /* '' */
+  .icon-twitter:before { content: '\f309'; } /* '' */
+  .icon-linkedin-squared:before { content: '\f30c'; } /* '' */
+  .icon-mastercard:before { content: '\f329'; } /* '' */
+
+  
+  #img_food .casilla{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#img_food article{
+    margin: 15px;
+
+}
+#img_food img{
+    width: 100%;
+    height: 60%;
+    max-width: 200px;
+    position: relative;
+}
+.buy_food{
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+#img_food h5{
+    width: 100%;
+    height: 60%;
+    max-width: 200px;
+    position: relative;
+}
+
+/*creamos un boton cuadrado con bordes blancos sencillo y fondo transparente*/
+.btn_plus{
+    text-align: center;
+    font-size: 15px;
+    display: block;
+    width: 15%;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 7px;
+    margin-top: 10px;
+    border-radius: 6px
+}
+
+.btn_plus:hover{
+    
+    background: rgba(172, 170, 62, 0.3);
+}

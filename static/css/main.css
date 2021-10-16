@@ -20,7 +20,6 @@ body{
     font-family: 'Montserrat', sans-serif;
     letter-spacing: normal;
     line-height: 1.5;
-    padding: 100px 20px 0;
     background: var(--color-theme-dark);
 }
 a{

@@ -17,14 +17,16 @@ Registro
         <input type="password" placeholder="Ingrese su contraseña" required>
         <label for="password">Repita la contraseña</label>
         <input type="password" placeholder="Ingrese nuevamente su contraseña" required>
-
+        
         <input id="remember" name="remember" type="checkbox" checked="checked">
         <label for="remember">Acepto los <a href="#">Términos y Condiciones</a> y <a href="#">Politicas de Protección de
                 Datos</a></label>
 
-        <input type="submit" value="Registrar">
+                <input type="submit" value="Registrar">
 
-        <a href="{{ url_for('signin') }}">Ya tienes una cuenta?</a>
-    </form>
-</div>
+                <a href="{{ url_for('signin') }}">Ya tienes una cuenta?</a>
+            </form>
+        </div>
+        
+{% include 'footer.html' %}
 {% endblock content %}
