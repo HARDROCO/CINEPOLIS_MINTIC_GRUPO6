@@ -8,6 +8,8 @@ app = Flask(__name__)
 lista_peliculas = ["pelicula1", "pelicula2", "pelicula3"]
 lista_usuarios = ["Juan", "Pedro", "Maria"]
 
+sesion_iniciada = False
+
 @app.route('/', methods=['GET'])
 def index():
 
@@ -15,13 +17,19 @@ def index():
 
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
-
-    return render_template('peliculas/signin.html')
+    if request.method == 'GET':
+        return render_template('peliculas/signin.html')
+    else:
+        sesion_iniciada = True
+        return redirect(url_for('index'))
+    
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
-
-    return render_template('peliculas/signup.html')
+    if request.method == 'GET':
+        return render_template('peliculas/signup.html')
+    else:
+        return redirect(url_for('signin'))
 
 @app.route('/forgetpass', methods=['GET', 'POST'])
 def forgetpass ():

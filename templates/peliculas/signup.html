@@ -8,7 +8,8 @@ Registro
 <div class="login-box">
     <img class="logo-signin" src="/static/img/logo.svg" alt="logo">
     <h1>Regístrarse</h1>
-    <form action="">
+    <form action="{{ url_for('signup') }}", method="POST">
+        {{ csrf_token }}
         <label for="nombre">Nombre</label>
         <input type="text" placeholder="Ingrese su nombre" required>
         <label for="mail">Correo</label>
