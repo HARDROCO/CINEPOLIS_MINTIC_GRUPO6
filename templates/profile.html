@@ -1,0 +1,410 @@
+{% extends 'base.html' %}
+{% block title %}
+| Perfil
+{% endblock title %}
+
+{% block content %}
+<!-- page title -->
+<section class="section section--first section--bg" data-bg="/static/img/section/section.jpg">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section__wrap">
+					<!-- section title -->
+					<h2 class="section__title">Mi Cinépolis</h2>
+					<!-- end section title -->
+
+					<!-- breadcrumb -->
+					<ul class="breadcrumb">
+						<li class="breadcrumb__item"><a href="{{url_for('index')}}">Home</a></li>
+						<li class="breadcrumb__item breadcrumb__item--active">Perfil</li>
+					</ul>
+					<!-- end breadcrumb -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end page title -->
+
+<!-- content -->
+<div class="content content--profile">
+	<!-- profile -->
+	<div class="profile">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="profile__content">
+						<div class="profile__user">
+							<div class="profile__meta">
+								<h3>Juan Martinez</h3>
+								<span>CINEPOLIS ID: 78123</span>
+							</div>
+						</div>
+
+						<!-- content tabs nav -->
+						<ul class="nav nav-tabs content__tabs content__tabs--profile" id="content__tabs" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab"
+									aria-controls="tab-1" aria-selected="true">Perfil</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3"
+									aria-selected="false">Configuración</a>
+							</li>
+						</ul>
+						<!-- end content tabs nav -->
+
+						<!-- content mobile tabs nav -->
+						<div class="content__mobile-tabs content__mobile-tabs--profile" id="content__mobile-tabs">
+							<div class="content__mobile-tabs-btn dropdown-toggle" role="navigation" id="mobile-tabs"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<input type="button" value="Profile">
+								<span></span>
+							</div>
+
+							<div class="content__mobile-tabs-menu dropdown-menu" aria-labelledby="mobile-tabs">
+								<ul class="nav nav-tabs" role="tablist">
+									<li class="nav-item"><a class="nav-link active" id="1-tab" data-toggle="tab"
+											href="#tab-1" role="tab" aria-controls="tab-1"
+											aria-selected="true">Perfil</a></li>
+
+									<li class="nav-item"><a class="nav-link" id="3-tab" data-toggle="tab" href="#tab-3"
+											role="tab" aria-controls="tab-3" aria-selected="false">Configuración</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- end content mobile tabs nav -->
+
+						<button class="profile__logout" type="button">
+							<i class="icon ion-ios-log-out"></i>
+							<span>Salir</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end profile -->
+
+	<div class="container">
+		<!-- content tabs -->
+		<div class="tab-content">
+			<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
+				<div class="row row--grid">
+					<!-- stats -->
+					<div class="col-12 col-sm-6 col-xl-3">
+						<div class="stats">
+							<span>Premium plan</span>
+							<p>$34.99 / month</p>
+							<i class="icon ion-ios-card"></i>
+						</div>
+					</div>
+					<!-- end stats -->
+
+					<!-- stats -->
+					<div class="col-12 col-sm-6 col-xl-3">
+						<div class="stats">
+							<span>Películas vistas</span>
+							<p><a href="#">1 678</a></p>
+							<i class="icon ion-ios-film"></i>
+						</div>
+					</div>
+					<!-- end stats -->
+
+					<!-- stats -->
+					<div class="col-12 col-sm-6 col-xl-3">
+						<div class="stats">
+							<span>Tus comentarios</span>
+							<p><a href="#">2 573</a></p>
+							<i class="icon ion-ios-chatbubbles"></i>
+						</div>
+					</div>
+					<!-- end stats -->
+
+					<!-- stats -->
+					<div class="col-12 col-sm-6 col-xl-3">
+						<div class="stats">
+							<span>Tus reviews</span>
+							<p><a href="#">1 021</a></p>
+							<i class="icon ion-ios-star-half"></i>
+						</div>
+					</div>
+					<!-- end stats -->
+
+					<!-- dashbox -->
+					<div class="col-12 col-xl-6">
+						<div class="dashbox">
+							<div class="dashbox__title">
+								<h3><i class="icon ion-ios-film"></i> Recomendaciones</h3>
+
+								<div class="dashbox__wrap">
+									<a class="dashbox__refresh" href="#"><i class="icon ion-ios-refresh"></i></a>
+									<a class="dashbox__more" href="{{url_for('cartelera')}}">Ver todas</a>
+								</div>
+							</div>
+
+							<div class="dashbox__table-wrap">
+								<table class="main__table main__table--dash">
+									<thead>
+										<tr>
+											<th>TITULO</th>
+											<th>GÉNERO</th>
+											<th>RATING</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="main__table-text"><a href="#">I Dream in Another
+														Language</a></div>
+											</td>
+											<td>
+												<div class="main__table-text">Movie</div>
+											</td>
+											<td>
+												<div class="main__table-text main__table-text--rate"><i
+														class="icon ion-ios-star"></i> 9.2</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="main__table-text"><a href="#">Benched</a></div>
+											</td>
+											<td>
+												<div class="main__table-text">Movie</div>
+											</td>
+											<td>
+												<div class="main__table-text main__table-text--rate"><i
+														class="icon ion-ios-star"></i> 9.1</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="main__table-text"><a href="#">Whitney</a></div>
+											</td>
+											<td>
+												<div class="main__table-text">TV Series</div>
+											</td>
+											<td>
+												<div class="main__table-text main__table-text--rate"><i
+														class="icon ion-ios-star"></i> 9.0</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="main__table-text"><a href="#">Blindspotting 2</a></div>
+											</td>
+											<td>
+												<div class="main__table-text">TV Series</div>
+											</td>
+											<td>
+												<div class="main__table-text main__table-text--rate"><i
+														class="icon ion-ios-star"></i> 8.9</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="main__table-text"><a href="#">Blindspotting</a></div>
+											</td>
+											<td>
+												<div class="main__table-text">TV Series</div>
+											</td>
+											<td>
+												<div class="main__table-text main__table-text--rate"><i
+														class="icon ion-ios-star"></i> 8.9</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end dashbox -->
+
+					<!-- dashbox -->
+					<div class="col-12 col-xl-6">
+						<div class="dashbox">
+							<div class="dashbox__title">
+								<h3><i class="icon ion-ios-star-half"></i> Últimos reviews</h3>
+
+								<div class="dashbox__wrap">
+									<a class="dashbox__refresh" href="#"><i class="icon ion-ios-refresh"></i></a>
+									<a class="dashbox__more" href="#">Ver Todos</a>
+								</div>
+							</div>
+
+							<div class="dashbox__table-wrap">
+								<table class="main__table main__table--dash">
+									<thead>
+										<tr>
+											<th>PELÍCULA</th>
+											<th>AUTOR</th>
+											<th>RATING</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="main__table-text"><a href="#">I Dream in Another
+														Language</a></div>
+											</td>
+											<td>
+												<div class="main__table-text">John Doe</div>
+											</td>
+											<td>
+												<div class="main__table-text main__table-text--rate"><i
+														class="icon ion-ios-star"></i> 7.2</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="main__table-text"><a href="#">Benched</a></div>
+											</td>
+											<td>
+												<div class="main__table-text">John Doe</div>
+											</td>
+											<td>
+												<div class="main__table-text main__table-text--rate"><i
+														class="icon ion-ios-star"></i> 6.3</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="main__table-text"><a href="#">Whitney</a></div>
+											</td>
+											<td>
+												<div class="main__table-text">John Doe</div>
+											</td>
+											<td>
+												<div class="main__table-text main__table-text--rate"><i
+														class="icon ion-ios-star"></i> 8.4</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="main__table-text"><a href="#">Blindspotting</a></div>
+											</td>
+											<td>
+												<div class="main__table-text">John Doe</div>
+											</td>
+											<td>
+												<div class="main__table-text main__table-text--rate"><i
+														class="icon ion-ios-star"></i> 9.0</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="main__table-text"><a href="#">I Dream in Another
+														Language</a></div>
+											</td>
+											<td>
+												<div class="main__table-text">John Doe</div>
+											</td>
+											<td>
+												<div class="main__table-text main__table-text--rate"><i
+														class="icon ion-ios-star"></i> 7.7</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- end dashbox -->
+				</div>
+			</div>
+
+
+
+			<div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="3-tab">
+				<div class="row">
+					<!-- details form -->
+					<div class="col-12 col-lg-6">
+						<form action="#" class="form form--profile">
+							<div class="row row--form">
+								<div class="col-12">
+									<h4 class="form__title">Detalles del Perfil</h4>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="form__group">
+										<label class="form__label" for="email">Correo</label>
+										<input id="email" type="email" name="email" class="form__input"
+											placeholder="juan@email.com">
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="form__group">
+										<label class="form__label" for="firstname">Nombre</label>
+										<input id="firstname" type="text" name="firstname" class="form__input"
+											placeholder="Juan">
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="form__group">
+										<label class="form__label" for="lastname">Apellido</label>
+										<input id="lastname" type="text" name="lastname" class="form__input"
+											placeholder="Martinez">
+									</div>
+								</div>
+
+								<div class="col-12">
+									<button class="form__btn" type="button">Actualizar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!-- end details form -->
+
+					<!-- password form -->
+					<div class="col-12 col-lg-6">
+						<form action="#" class="form form--profile">
+							<div class="row row--form">
+								<div class="col-12">
+									<h4 class="form__title">Cambiar contraseña</h4>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="form__group">
+										<label class="form__label" for="oldpass">Contraseña anterior</label>
+										<input id="oldpass" type="password" name="oldpass" class="form__input">
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="form__group">
+										<label class="form__label" for="newpass">Nueva contraseña</label>
+										<input id="newpass" type="password" name="newpass" class="form__input">
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+									<div class="form__group">
+										<label class="form__label" for="confirmpass">Confirma nueva contraseña</label>
+										<input id="confirmpass" type="password" name="confirmpass" class="form__input">
+									</div>
+								</div>
+
+
+
+								<div class="col-12">
+									<button class="form__btn" type="button">Guardar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!-- end password form -->
+				</div>
+			</div>
+		</div>
+		<!-- end content tabs -->
+	</div>
+</div>
+<!-- end content -->
+
+{% endblock content %}
