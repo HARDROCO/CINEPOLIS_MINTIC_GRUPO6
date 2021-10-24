@@ -9,7 +9,6 @@ from Conexion import Conexion
 from CinemaDAO import CinemaDAO
 
 # TODO: ya quedaron las clases de conexion y consultas creadas para enviar una consutla filtrada debe hacerse con una tupla y para evitar insercion de codigo utilizar ? en el puesto del valor en sqlite
-
 app = Flask(__name__)
 
 # Listas de prueba
