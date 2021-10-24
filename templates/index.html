@@ -1,0 +1,436 @@
+{% extends 'base.html' %}
+{% block title %}
+| Home
+{% endblock title %}
+
+{% block content %}
+	<!-- home -->
+	<section class="home home--bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="home__title"><b>EN</b> CARTELERA</h1>
+
+					<button class="home__nav home__nav--prev" type="button">
+						<i class="icon ion-ios-arrow-round-back"></i>
+					</button>
+					<button class="home__nav home__nav--next" type="button">
+						<i class="icon ion-ios-arrow-round-forward"></i>
+					</button>
+				</div>
+
+				<div class="col-12">
+					<div class="owl-carousel home__carousel home__carousel--default">
+						<div class="card card--big">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--green">8.4</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">I Dream in Another Language</a></h3>
+								<span class="card__category">
+									<a href="#">Action</a>
+									<a href="#">Triler</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card card--big">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover2.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--green">7.1</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Benched</a></h3>
+								<span class="card__category">
+									<a href="#">Comedy</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card card--big">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover3.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--green">7.9</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Whitney</a></h3>
+								<span class="card__category">
+									<a href="#">Romance</a>
+									<a href="#">Drama</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card card--big">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover4.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--yellow">6.8</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Blindspotting</a></h3>
+								<span class="card__category">
+									<a href="#">Comedy</a>
+									<a href="#">Drama</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card card--big">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover5.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--yellow">6.2</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Blindspotting</a></h3>
+								<span class="card__category">
+									<a href="#">Comedy</a>
+									<a href="#">Drama</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card card--big">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover6.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--red">5.3</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">I Dream in Another Language</a></h3>
+								<span class="card__category">
+									<a href="#">Action</a>
+									<a href="#">Triler</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card card--big">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover7.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--red">5.9</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Benched</a></h3>
+								<span class="card__category">
+									<a href="#">Comedy</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card card--big">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover8.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--green">9.1</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Whitney</a></h3>
+								<span class="card__category">
+									<a href="#">Romance</a>
+									<a href="#">Drama</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card card--big">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover9.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--yellow">6.6</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Blindspotting</a></h3>
+								<span class="card__category">
+									<a href="#">Comedy</a>
+									<a href="#">Drama</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card card--big">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover10.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--green">8.1</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Blindspotting</a></h3>
+								<span class="card__category">
+									<a href="#">Comedy</a>
+									<a href="#">Drama</a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end home -->
+
+	
+
+	<!-- section -->
+	<section class="section section--border">
+		<div class="container">
+			<div class="row">
+				<!-- section title -->
+				<div class="col-12">
+					<div class="section__title-wrap">
+						<h2 class="section__title">Próximamente</h2>
+
+						<div class="section__nav-wrap">
+							<a href="{{url_for('cartelera')}}" class="section__view">Ver todo</a>
+
+							<button class="section__nav section__nav--prev" type="button" data-nav="#carousel1">
+								<i class="icon ion-ios-arrow-back"></i>
+							</button>
+
+							<button class="section__nav section__nav--next" type="button" data-nav="#carousel1">
+								<i class="icon ion-ios-arrow-forward"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- end section title -->
+
+				<!-- carousel -->
+				<div class="col-12">
+					<div class="owl-carousel section__carousel" id="carousel1">
+						<div class="card">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--green">8.4</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">I Dream in Another Language</a></h3>
+								<span class="card__category">
+									<a href="#">Action</a>
+									<a href="#">Triler</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover2.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--green">7.1</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Benched</a></h3>
+								<span class="card__category">
+									<a href="#">Comedy</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover3.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--red">6.3</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Whitney</a></h3>
+								<span class="card__category">
+									<a href="#">Romance</a>
+									<a href="#">Drama</a>
+									<a href="#">Music</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover4.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--yellow">6.9</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Blindspotting</a></h3>
+								<span class="card__category">
+									<a href="#">Comedy</a>
+									<a href="#">Drama</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover5.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--green">8.4</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">I Dream in Another Language</a></h3>
+								<span class="card__category">
+									<a href="#">Action</a>
+									<a href="#">Triler</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover6.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--green">7.1</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Benched</a></h3>
+								<span class="card__category">
+									<a href="#">Comedy</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover7.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--green">7.1</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Benched</a></h3>
+								<span class="card__category">
+									<a href="#">Comedy</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover8.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--red">5.5</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">I Dream in Another Language</a></h3>
+								<span class="card__category">
+									<a href="#">Action</a>
+									<a href="#">Triler</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover9.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--yellow">6.7</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Blindspotting</a></h3>
+								<span class="card__category">
+									<a href="#">Comedy</a>
+									<a href="#">Drama</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover10.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--red">5.6</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Whitney</a></h3>
+								<span class="card__category">
+									<a href="#">Romance</a>
+									<a href="#">Drama</a>
+									<a href="#">Music</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover11.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--green">9.2</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">Benched</a></h3>
+								<span class="card__category">
+									<a href="#">Comedy</a>
+								</span>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card__cover">
+								<img src="/static/img/covers/cover12.jpg" alt="">
+								<a href="{{url_for('pelicula')}}" class="card__play">
+									<i class="icon ion-ios-play"></i>
+								</a>
+								<span class="card__rate card__rate--green">8.4</span>
+							</div>
+							<div class="card__content">
+								<h3 class="card__title"><a href="{{url_for('pelicula')}}">I Dream in Another Language</a></h3>
+								<span class="card__category">
+									<a href="#">Action</a>
+									<a href="#">Triler</a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- carousel -->
+			</div>
+		</div>
+	</section>
+	<!-- end section -->
+
+	{% endblock content %}

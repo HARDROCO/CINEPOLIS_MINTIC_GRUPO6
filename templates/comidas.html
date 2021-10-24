@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% block title %}
+| Comidas
+{% endblock title %}
+
+{% block content %}
+	<!-- page title -->
+	<section class="section section--first section--bg" data-bg="/static/img/section/section.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="section__wrap">
+						<!-- section title -->
+						<h1 class="section__title">Comidas</h1>
+						<!-- end section title -->
+
+						<!-- breadcrumb -->
+						<ul class="breadcrumb">
+							<li class="breadcrumb__item"><a href="{{url_for('index')}}">Home</a></li>
+							<li class="breadcrumb__item breadcrumb__item--active">Comidas</li>
+						</ul>
+						<!-- end breadcrumb -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end page title -->
+
+	<!-- section -->
+	<section class="section section--border">
+		<div class="container">
+			<div class="row">
+				<!-- section title -->
+				<div class="col-12">
+					<div class="section__title-wrap">
+						<h2 class="section__title">Combos</h2>
+
+						<div class="section__nav-wrap">
+							
+
+							<button class="section__nav section__nav--prev" type="button" data-nav="#carousel1">
+								<i class="icon ion-ios-arrow-back"></i>
+							</button>
+
+							<button class="section__nav section__nav--next" type="button" data-nav="#carousel1">
+								<i class="icon ion-ios-arrow-forward"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- end section title -->
+
+				<!-- carousel -->
+				<div class="col-12">
+					<div class="owl-carousel section__carousel" id="carousel1">
+						<div class="card">
+							<div class="card__cover">
+								<img src="/static/img/food/combo1.png" alt="">
+							</div>
+							<div class="card__content">
+								<h3 class="card__title">Combo 1</h3>
+								<span class="card__category">
+									<p>1 Crispeta de sal 120 g + 2 perros calientes + 2 bebidas PET (600ml o 400ml c/u) + 1 Kit Kat 41 g + 1 chocolatina Jet 30 g</p>
+								</span>
+							</div>
+						</div>
+
+                        <div class="card">
+							<div class="card__cover">
+								<img src="/static/img/food/combo2.jpg" alt="">
+							</div>
+							<div class="card__content">
+								<h3 class="card__title">Combo 2</h3>
+								<span class="card__category">
+									<p>1 Crispeta de sal 120 g + 1 perro caliente + 1 bebida PET (600ml o 400ml c/u) + 1 Kit Kat 41 g</p>
+								</span>
+							</div>
+						</div>
+
+                        <div class="card">
+							<div class="card__cover">
+								<img src="/static/img/food/combo3.png" alt="">
+							</div>
+							<div class="card__content">
+								<h3 class="card__title">Combo 3</h3>
+								<span class="card__category">
+									<p>1 Crispeta de sal 150 g + 2 bebidas PET (600ml o 400ml c/u)</p>
+								</span>
+							</div>
+						</div>
+
+                        <div class="card">
+							<div class="card__cover">
+								<img src="/static/img/food/combo4.png" alt="">
+							</div>
+							<div class="card__content">
+								<h3 class="card__title">Combo 4</h3>
+								<span class="card__category">
+									<p>1 Caja crispetas de sal 55 g + 1 bebida PET (600 ml o 400 ml) + 1 chocolatina Jet 30g</p>
+								</span>
+							</div>
+						</div>
+
+                        <div class="card">
+							<div class="card__cover">
+								<img src="/static/img/food/combo5.jpg" alt="">
+							</div>
+							<div class="card__content">
+								<h3 class="card__title">Combo 5</h3>
+								<span class="card__category">
+									<p>½ Philadelphia Roll + ½ Salmón Teriyaki + ½ Spider Roll + ½ Roll.</p>
+								</span>
+							</div>
+						</div>
+
+                        <div class="card">
+							<div class="card__cover">
+								<img src="/static/img/food/combo6.jpg" alt="">
+							</div>
+							<div class="card__content">
+								<h3 class="card__title">Combo 6</h3>
+								<span class="card__category">
+									<p>½ Philadelphia Roll + ½ Salmón Teriyaki + ½ Royal Tiger + ½ Inka Roll.</p>
+								</span>
+							</div>
+						</div>
+
+                        <div class="card">
+							<div class="card__cover">
+								<img src="/static/img/food/combo7.jpg" alt="">
+							</div>
+							<div class="card__content">
+								<h3 class="card__title">Combo 7</h3>
+								<span class="card__category">
+									<p>1 Ceviche (a escoger) + ½ Roll + ½ California Roll + ½ Philadelphia Roll + ½ Royal Tiger.</p>
+								</span>
+							</div>
+						</div>
+
+						
+					</div>
+				</div>
+				<!-- carousel -->
+			</div>
+		</div>
+	</section>
+	<!-- end section -->
+
+	
+	{% endblock content %}
