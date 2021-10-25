@@ -263,9 +263,9 @@ def añadiruser():
 
     if request.method == 'POST':
 
-        _id_user = request.form['usuario']
+        _id_user = request.form['username']
         _email = request.form['email']
-        _nombre = request.form['nombre']
+        _nombre = request.form['firstname']
         _contraseña = request.form['contraseña']
         _rol = request.form['rol']
         
