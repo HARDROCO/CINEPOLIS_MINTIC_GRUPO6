@@ -49,6 +49,8 @@ def signout():
     return redirect(url_for('index'))
 
 
+
+
 @app.route('/forgot', methods=['GET', 'POST'])
 def forgot():
 
@@ -81,13 +83,6 @@ def pelicula():
 def perfil():
     return render_template('perfil.html')
 
-# @app.route('/perfil/<id_usuario>', methods=['GET'])
-# def perfil(id_usuario):
-#     if id_usuario in lista_usuarios:
-#         return render_template('perfil.html')
-#     else:
-#         return redirect(url_for('signin'))
-
 
 @app.route('/comidas/', methods=['GET'])
 def comidas():
@@ -118,10 +113,14 @@ def privacy():
 def indexadmin():
     return render_template('admin/index-admin.html')
 
+@app.route('/add-cartelera')
+def addcartelera():
+    return render_template('/admin/add-cartelera.html')
 
 @app.route('/404')
 def notfound():
     return render_template('admin/404.html')
+
 
 
 @app.route('/edit-user')
@@ -217,6 +216,41 @@ def storemovie():
         print("NO SE ENVIO LA QUERY")
 
     return render_template('/admin/catalog.html')
+
+#metodo para agregar peliculs a la cartelera en la bd
+
+@app.route('/storecartelera', methods=['GET', 'POST'])
+def storecartelera():
+
+    if request.method == 'POST':
+
+        _id_cartelera = request.form['id_cartelera']
+        _id_peli = request.form['id_pelicula']
+        _id_sala = request.form['id_sala']
+        _hora_inicio = request.form['hora_inicio']
+        _hora_fin = request.form['hora_fin']
+        _fecha = request.form['fecha']
+        _estado = request.form['estado']
+        
+        # TODO: AJUSTAR VALOR A BD RELACIONAL
+        
+
+        # instruccion sql para enviar info a la DB
+        sql = "INSERT INTO CARTELERA (ID_CARTELERA, ID_PELICULA, ID_SALA, HORAINICIO, HORAFIN, FECHA, ID_ESTADO) VALUES (?, ?, ?, ?, ?, ?, ?)"
+
+        # tupla de valores que se enviaran a la DB
+        var = (_id_cartelera, _id_peli,_id_sala,_hora_inicio,_hora_fin,_fecha,_estado)
+
+        # instanciando objeto DAO
+        carte = CinemaDAO()
+        result = carte.InsertDrop_table(sql, var)
+        print(result)  # impresion de resultado de la insercion
+
+    else:
+        print("NO SE ENVIO LA QUERY")
+
+    return render_template('cartelera.html')
+
 
 
 if __name__ == '__main__':
