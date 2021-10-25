@@ -8,6 +8,9 @@ import os  # Para entrar a la carpeta de imagenes
 from Conexion import Conexion
 from CinemaDAO import CinemaDAO
 
+#Libreria para cifrar el password
+import hashlib
+
 # TODO: ya quedaron las clases de conexion y consultas creadas para enviar una consutla filtrada debe hacerse con una tupla y para evitar insercion de codigo utilizar ? en el puesto del valor en sqlite
 app = Flask(__name__)
 
@@ -30,7 +33,31 @@ def signin():
         return render_template('signin.html')
     else:
         sesion_iniciada = True
-        return redirect(url_for('index'))
+        #Código para loguearse
+         #**************************************
+        email = request.form['email']
+        password = request.form['password']
+        enc = hashlib.sha256(password.encode())
+        pass_enc = enc.hexdigest()
+
+        # instruccion sql para enviar info a la DB
+        sql = "SELECT * FROM usuarios WHERE correo = ? and contrasena = ?"
+
+        # tupla de valores que se enviaran a la DB
+        var = (email,pass_enc,)
+        
+        # instanciando objeto DAO
+        movies = CinemaDAO()
+        result = movies.filter_table(sql, var)
+        #print(result["correo"], result["contrasena"])  # impresion de resultado de la insercion
+        print(result)
+        if result == None:
+            print("Usuario, no autorizado")
+            return redirect(url_for('index'))
+        else:
+            #if (result["correo"] == email and result["contrasena"] == pass_enc):
+            return redirect(url_for('cartelera'))
+    
 
 
 @app.route('/signup/', methods=['GET', 'POST'])
@@ -39,7 +66,26 @@ def signup():
     if request.method == 'GET':
         return render_template('signup.html')
     else:
-        return redirect(url_for('signin'))
+        #**************************************
+        nombre = request.form['nombre']
+        email = request.form['email']
+        password = request.form['password']
+        enc = hashlib.sha256(password.encode())
+        pass_enc = enc.hexdigest()
+
+        _id_estado = 2
+
+        # instruccion sql para enviar info a la DB
+        sql = "INSERT INTO usuarios (nombre, correo,contrasena, id_rol) VALUES (?, ?, ?, ?)"
+
+        # tupla de valores que se enviaran a la DB
+        var = (nombre, email, pass_enc, _id_estado)
+
+        # instanciando objeto DAO
+        movies = CinemaDAO()
+        result = movies.InsertDrop_table(sql, var)
+        print(result)  # impresion de resultado de la insercion
+        return render_template('signin.html')
 
 
 @app.route('/signout', methods=['POST'])

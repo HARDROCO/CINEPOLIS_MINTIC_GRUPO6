@@ -12,7 +12,7 @@
 				<div class="col-12">
 					<div class="sign__content">
 						<!-- authorization form -->
-						<form action="#" class="sign__form">
+						<form action="" class="sign__form" method = 'post'>
 							<a href="{{url_for('index')}}" class="sign__logo">
 								<img src="/static/img/logo.svg" alt="">
 							</a>
@@ -27,11 +27,11 @@
 							</div> -->
 
 							<div class="sign__group">
-								<input type="email" class="sign__input" placeholder="Correo" id="user">
+								<input name = "email" type="email" class="sign__input" placeholder="Correo" id="user">
 							</div>
 
 							<div class="sign__group">
-								<input type="password" class="sign__input" placeholder="Contraseña" id="pass">
+								<input name = "password" type="password" class="sign__input" placeholder="Contraseña" id="pass">
 							</div>
 
 							<div class="sign__group sign__group--checkbox">
@@ -39,7 +39,7 @@
 								<label for="remember">Recuérdame</label>
 							</div>
 							
-							<button class="sign__btn" type="button" onclick="login()">Ingresar</button>
+							<button class="sign__btn" type="submit">Ingresar</button>
 
 							<span class="sign__delimiter">o</span>
 
