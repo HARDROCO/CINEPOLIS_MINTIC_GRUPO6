@@ -218,6 +218,68 @@ def storemovie():
 
     return render_template('/admin/catalog.html')
 
+#Añadir cartelera
+@app.route('/storecartelera', methods=['GET', 'POST'])
+def storecartelera():
+
+    if request.method == 'POST':
+
+        _id_cartelera = request.form['id_cartelera']
+        _id_peli = request.form['id_pelicula']
+        _id_sala = request.form['id_sala']
+        _hora_inicio = request.form['hora_inicio']
+        _hora_fin = request.form['hora_fin']
+        _fecha = request.form['fecha']
+        _estado = request.form['estado']
+        
+        # TODO: AJUSTAR VALOR A BD RELACIONAL
+        
+
+        # instruccion sql para enviar info a la DB
+        sql = "INSERT INTO CARTELERA (ID_CARTELERA, ID_PELICULA, ID_SALA, HORAINICIO, HORAFIN, FECHA, ID_ESTADO) VALUES (?, ?, ?, ?, ?, ?, ?)"
+
+        # tupla de valores que se enviaran a la DB
+        var = (_id_cartelera, _id_peli,_id_sala,_hora_inicio,_hora_fin,_fecha,_estado)
+
+        # instanciando objeto DAO
+        carte = CinemaDAO()
+        result = carte.InsertDrop_table(sql, var)
+        print(result)  # impresion de resultado de la insercion
+
+    else:
+        print("NO SE ENVIO LA QUERY")
+
+    return render_template('cartelera.html')
+
+
+# usuario agregar
+@app.route('/añadiruser', methods=['GET', 'POST'])
+def añadiruser():
+
+    if request.method == 'POST':
+
+        _id_user = request.form['usuario']
+        _email = request.form['email']
+        _nombre = request.form['nombre']
+        _contraseña = request.form['contraseña']
+        _rol = request.form['rol']
+        
+
+        # instruccion sql para enviar info a la DB
+        sql = "INSERT INTO CARTELERA (ID_USUARIO, CORREO, NOMBRE, CONTRASEÑA, ID_ROL) VALUES (?, ?, ?, ?, ?)"
+
+        # tupla de valores que se enviaran a la DB
+        var = (_id_user,_email,_nombre,_contraseña,_rol)
+
+        # instanciando objeto DAO
+        user = CinemaDAO()
+        result = user.InsertDrop_table(sql, var)
+        print(result)  # impresion de resultado de la insercion
+
+    else:
+        print("NO SE ENVIO LA QUERY")
+
+    return render_template('profile.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
