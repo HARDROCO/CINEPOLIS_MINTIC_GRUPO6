@@ -1,0 +1,103 @@
+{% extends '/admin/base-admin.html' %}
+{% block title %}
+| Añadir Película
+{% endblock title %}
+
+{% block content %}
+<!-- main content -->
+<main class="main">
+	<div class="container-fluid">
+		<div class="row">
+			<!-- main title -->
+			<div class="col-12">
+				<div class="main__title">
+					<h2>Añadir pelicula en la cartelera</h2>
+				</div>
+			</div>
+			<!-- end main title -->
+
+			<!-- form -->
+			<div class="col-12">
+				<!-- AÑADIR METODO A FORM PARA PODER CAPTURAR DATOS  -->
+				<form action="/storecartelera" class="form" method="post">
+					<div class="row row--form">
+						<div class="col-12 col-md-7 form__content">
+							<div class="row row--form">
+								<div class="col-12">
+									<!-- cuadro texto id cartelera  -->
+									<input type="text" class="form__input" placeholder="ID" name="id_cartelera">
+									<!-- fin  -->
+								</div>
+								<div class="col-12">
+									<!-- cuadro texto id peliculas  -->
+									<input type="text" class="form__input" placeholder="Codigo pelicula" name="id_pelicula">
+									<!-- fin  -->
+								</div>
+								<div class="col-12">
+									<!-- cuadro texto id sala  -->
+									<input type="text" class="form__input" placeholder="Codigo sala" name="id_sala">
+									<!-- fin  -->
+								</div>
+
+								<div class="col-12 col-sm-6 col-lg-3">
+									<!-- cuadro texto hora inicio  -->
+									<input type="text" class="form__input" placeholder="Hora inicio" name="hora_inicio">
+									<!-- fin  -->
+								</div>
+
+
+								<div class="col-12 col-sm-6 col-lg-3">
+									<!-- cuadro texto hora fin  -->
+									<input type="text" class="form__input" placeholder="Hora fin" name="hora_fin">
+									<!-- fin  -->
+								</div>
+
+								
+								<div class="col-12 col-sm-6 col-lg-3">
+									<!-- cuadro texto Categoría pelicula  -->
+									<input type="date" class="form__input" placeholder="fecha"
+										name="fecha">
+									<!-- fin  -->
+								</div>
+								<div class="col-12 col-sm-6 col-lg-3">
+									<!-- cuadro texto hora fin  -->
+									<input type="text" class="form__input" placeholder="Estado" name="estado">
+									<!-- fin  -->
+								</div>
+
+
+								
+								<!--
+								<div class="col-12 col-sm-6 col-lg-3">
+									
+									<select class="form__input" id="format" name="estado">
+										<option value="">seleccione</option>
+										<option value="1">Activo</option>
+										<option value="2">Desactivo</option>
+										<option value="3">Proximamente</option>
+									</select>
+								</div>
+								-->
+								
+
+
+							</div>
+						</div>
+
+
+						<div class="col-12">
+							<div class="row row--form">
+								<div class="col-12">
+									<button type="submit" class="form__btn">Añadir</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- end form -->
+		</div>
+	</div>
+</main>
+<!-- end main content -->
+{% endblock content %}l>
