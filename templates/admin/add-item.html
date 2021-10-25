@@ -71,8 +71,8 @@
 
 								<div class="col-12 col-sm-6 col-lg-3">
 									<!-- cuadro texto formato pelicula -->
-									<select class="js-example-basic-single" id="format" name="formato_pelicula">
-										<option value=""></option>
+									<select class="form__input" id="format" name="formato_pelicula" >
+										<option value="">Formato</option>
 										<option value="2D">2D</option>
 										<option value="3D">3D</option>
 									</select>
@@ -81,15 +81,20 @@
 
 								<div class="col-12 col-sm-6 col-lg-3">
 									<!-- cuadro texto Categoría pelicula  -->
-									<input type="text" class="form__input" placeholder="Categoría"
-										name="categoria_pelicula">
+									<select class="form__input" id="format" name="categoria_pelicula" >
+										<option value="">Categoria</option>
+										<option value="1">Sin restriccion</option>
+										<option value="2">mayores 12</option>
+										<option value="3">mayores 16</option>
+										<option value="4">mayores 21</option>
+									</select>
 									<!-- fin  -->
 								</div>
 
 								<div class="col-12 col-lg-6">
 									<!-- cuadro texto pais pelicula  -->
-									<select class="js-example-basic-multiple" id="country" multiple="multiple"
-										name="pais_pelicula">
+									<select  class="form__input" id="country" multiple="multiple" name="pais_pelicula">
+										<option value="">Pais</option>
 										<option value="Afghanistan">Afghanistan</option>
 										<option value="Åland Islands">Åland Islands</option>
 										<option value="Albania">Albania</option>
@@ -318,8 +323,9 @@
 
 								<div class="col-12 col-lg-6">
 									<!-- cuadro texto genero pelicula  -->
-									<select class="js-example-basic-multiple" id="genre" multiple="multiple"
+									<select class="form__input" id="genre" multiple="multiple"
 										name="genero_pelicula">
+										<option value="">Genero</option>
 										<option value="Action">Action</option>
 										<option value="Animation">Animation</option>
 										<option value="Comedy">Comedy</option>
