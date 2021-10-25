@@ -44,7 +44,7 @@ class CinemaDAO():
     def filter_table(self, sql: str, var: tuple) -> tuple:
         '''Esta funcion se conecta a la base de datos de sqlite y envia una consulta que puede ser del tipo "SELECT col1 FROM tabla1  WHERE col1 = valor y devuelve todas ls filas resultado'''
 
-        print("ejecutando query...")
+        print("ejecutando query")
         resp = False
 
         try:
@@ -55,16 +55,22 @@ class CinemaDAO():
             # si se conecta a DB
             if conn != None:
                 cursor = conn.cursor()  # Creamos un cursor
+                print(sql,var)
                 cursor.execute(sql, var)  # enviar consulta
-                result = cursor.fetchall()  # Obtenemos todos los registros
+                #cursor.execute("SELECT * FROM usuarios where correo = 'g@yahoo.com'")
+                #Esto no puede ir aqui, porque aún no se a ejecutado el commit
+                #result = cursor.fetchall()  # Obtenemos todos los registros
+                
             resp = True
         except:
             conn.rollback()  # si hay un error, se deshace la transaccion
-            print("no se pudo conectar a la data base")
+            print("no se pudo conectar a la data base cinemaDAO")
 
         conn.commit()
+        result = cursor.fetchone()
+        #print(result["nombre"])
         conn.close()  # no olvidar cerrar siempre la conexion con la db
-
+        
         return result
 
 

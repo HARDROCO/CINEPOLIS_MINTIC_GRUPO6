@@ -12,21 +12,21 @@
 				<div class="col-12">
 					<div class="sign__content">
 						<!-- registration form -->
-						<form action="#" class="sign__form">
+						<form action="" class="sign__form" method = "POST">
 							<a href="{{url_for('index')}}" class="sign__logo">
 								<img src="/static/img/logo.svg" alt="">
 							</a>
 
 							<div class="sign__group">
-								<input type="text" class="sign__input" placeholder="Nombre">
+								<input name = "nombre" type="text" class="sign__input" placeholder="Nombre">
 							</div>
 
 							<div class="sign__group">
-								<input type="email" class="sign__input" placeholder="Correo">
+								<input name  = "email" type="email" class="sign__input" placeholder="Correo">
 							</div>
 
 							<div class="sign__group">
-								<input type="password" class="sign__input" placeholder="Contraseña">
+								<input name = "password" type="password" class="sign__input" placeholder="Contraseña">
 							</div>
 
 							<div class="sign__group sign__group--checkbox">
@@ -34,7 +34,8 @@
 								<label for="remember">Estoy de acuerdo con las <a href="{{url_for('privacy')}}">Políticas de Privacidad</a></label>
 							</div>
 							
-							<button class="sign__btn" type="button">Registro</button>
+							<button class="sign__btn" type="submit">Registro</button>
+							
 
 							<span class="sign__delimiter">o</span>
 
