@@ -5,22 +5,11 @@
 
 {% block content %}
 
-<!-- main content -->
-<main class="main">
-	<div class="container-fluid">
-		<div class="row">
-			<!-- main title -->
-			<div class="col-12">
-				<div class="main__title">
-					<h2>Editar usuario</h2>
-				</div>
-			</div>
-			<!-- end main title -->
 	<!-- main content -->
 	<main class="main">
 		<div class="container-fluid">
 			<div class="row">
-				<!-- main title -->
+				<!-- main title BORRAR -->
 				<div class="col-12">
 					<div class="main__title">
 						<h2>Editar usuario</h2>
@@ -94,7 +83,7 @@
 							<div class="row">
 								<!-- details form -->
 								<div class="col-12 col-lg-6">
-									<form action="#" class="form form--profile">
+									<form action="/añadiruser" class="form form--profile" method="post">
 										<div class="row row--form">
 											<div class="col-12">
 												<h4 class="form__title">Detalles del perfil</h4>
@@ -103,7 +92,7 @@
 											<div class="col-12 col-md-6 col-lg-12 col-xl-6">
 												<div class="form__group">
 													<label class="form__label" for="username">Usuario</label>
-													<input id="username" type="text" name="username" class="form__input" placeholder="Usuario 123">
+													<input id="username" type="text" name="username" class="form__input" placeholder="ID">
 												</div>
 											</div>
 
@@ -116,15 +105,15 @@
 
 											<div class="col-12 col-md-6 col-lg-12 col-xl-6">
 												<div class="form__group">
-													<label class="form__label" for="firstname">Nombre</label>
-													<input id="firstname" type="text" name="firstname" class="form__input" placeholder="John">
+													<label class="form__label" for="firstname">Nombre Completo</label>
+													<input id="firstname" type="text" name="firstname" class="form__input" >
 												</div>
 											</div>
 
 											<div class="col-12 col-md-6 col-lg-12 col-xl-6">
 												<div class="form__group">
-													<label class="form__label" for="lastname">Apellido</label>
-													<input id="lastname" type="text" name="lastname" class="form__input" placeholder="Doe">
+													<label class="form__label" for="lastname">Contraseña</label>
+													<input type="password" name="contraseña" class="form__input" >
 												</div>
 											</div>
 
@@ -132,16 +121,17 @@
 											<div class="col-12 col-md-6 col-lg-12 col-xl-6">
 												<div class="form__group">
 													<label class="form__label" for="rights">Rol</label>
-													<select class="js-example-basic-single" id="rights">
-														<option value="User">Usuario</option>
-														<option value="Moderator">Moderador</option>
-														<option value="Admin">Admin</option>
+													<select class="js-example-basic-single" id="rights" name ="rol">
+														<option value="1">Seleccionar</option>
+														<option value="1">Usuario</option>
+														<option value="2">Administrador</option>
+														<option value="3">SuperAdministrador</option>
 													</select>
 												</div>
 											</div>
 
 											<div class="col-12">
-												<button class="form__btn" type="button">Guardar</button>
+												<button class="form__btn" type="submit" name="btn_añadir">Añadir</button>
 											</div>
 										</div>
 									</form>
@@ -912,10 +902,6 @@
 					</div>
 				</div>
 				<!-- end content tabs -->
-			</div>
-		</div>
-	</main>
-	<!-- end main content -->
 
 	<!-- modal view -->
 	<div id="modal-view" class="zoom-anim-dialog mfp-hide modal modal--view">
