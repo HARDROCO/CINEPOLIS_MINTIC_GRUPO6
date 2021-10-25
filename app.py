@@ -132,6 +132,11 @@ def edituser():
 @app.route('/add-item')
 def additem():
     return render_template('/admin/add-item.html')
+    
+#ruta para que agrege peliculs a la cartelera
+@app.route('/add-cartelera')
+def addcartelera():
+    return render_template('/admin/add-cartelera.html')
 
 
 @app.route('/users')
@@ -266,7 +271,7 @@ def añadiruser():
         
 
         # instruccion sql para enviar info a la DB
-        sql = "INSERT INTO CARTELERA (ID_USUARIO, CORREO, NOMBRE, CONTRASEÑA, ID_ROL) VALUES (?, ?, ?, ?, ?)"
+        sql = "INSERT INTO USUARIOS (ID_USUARIO, CORREO, NOMBRE, CONTRASENA, ID_ROL) VALUES (?, ?, ?, ?, ?)"
 
         # tupla de valores que se enviaran a la DB
         var = (_id_user,_email,_nombre,_contraseña,_rol)
